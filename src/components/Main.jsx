@@ -1,4 +1,4 @@
-import { useState, useEffect, useEffectEvent } from "react"
+import { useState, useEffect} from "react"
 import { jsx } from "react/jsx-runtime";
 
 export default function Main() {
