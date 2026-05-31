@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useEffect, useEffectEvent } from "react"
+import { jsx } from "react/jsx-runtime";
 
 export default function Main() {
   const [meme, setMeme]= useState({
@@ -6,6 +7,12 @@ export default function Main() {
     bottomText:"Walk into Mordor",
     imageUrl: "http://i.imgflip.com/1bij.jpg"
   })
+
+  useEffect(()=> {
+    fetch("https://api.imgflip.com/get_memes")
+    .then(res=> res.json())
+    .then(data => console.log(data.data.memes[0].url))
+  }, [])
 
   function handleChange(e){
     const {value, name} = e.currentTarget
