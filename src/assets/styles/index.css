@@ -112,3 +112,12 @@ main {
 .top {
   top: 0;
 }
+
+footer {
+  text-align: center;
+}
+
+footer a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
